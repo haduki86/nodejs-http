@@ -75,7 +75,7 @@ const server = http
   .on('clientError', e => {
     console.error(`[${new Date()}] Server Error`, e)
   })
-const port = 8000;
+const port = process.env.PORT || 8000;
 server.listen(port, () => {
   console.log(`現在 ${port} でポートが開いています`);
 });
